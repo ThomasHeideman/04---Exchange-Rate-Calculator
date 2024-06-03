@@ -1,0 +1,21 @@
+/* :root {
+    --variable: value;
+  } */
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
