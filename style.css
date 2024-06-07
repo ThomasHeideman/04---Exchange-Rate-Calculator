@@ -1,6 +1,9 @@
-/* :root {
-    --variable: value;
-  } */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --primary-color: #5fbaa7;
+  --primary-color-hover: #37af95;
+}
 
 * {
   box-sizing: border-box;
@@ -10,12 +13,108 @@ html {
 }
 
 body {
-  background-color: #fff;
-  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
+  padding: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+p {
+  text-align: center;
+}
+.money-img {
+  width: 10rem;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border: 0;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 0.875rem;
+  background-color: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px, rgba(0, 0, 0, 0.23) 0px 2px 4px;
+  cursor: pointer;
+  transition: ease 300ms;
+}
+
+.btn i {
+  margin-right: 0.25rem;
+}
+.btn:hover {
+  background-color: var(--primary-color-hover);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.currency {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.currency select {
+  padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  border: 1px solid #dedede;
+  background-image: url('src/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 6px top 50%;
+  background-size: 12px auto, 100%;
+  flex-grow: 1;
+}
+.currency input {
+  padding: 0.75rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  border: 1px solid #dedede;
+  text-align: right;
+}
+.currency-flag {
+  height: 32px;
+  width: auto;
+}
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+.swap-rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.rate {
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  padding: 0.75rem;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  .currency input {
+    width: 200px;
+  }
 }
